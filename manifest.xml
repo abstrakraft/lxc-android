@@ -2,13 +2,13 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
-           review="https://android-review.googlesource.com/" />
+           fetch="https://android.googlesource.com/"
+           />
   <remote  name="abstrakraft"
-           fetch="git@github.com:abstrakraft/" />
+           fetch="https://github.com/abstrakraft/" />
   <default revision="refs/tags/android-4.2_r1"
            remote="aosp"
-           sync-j="4" />
+           />
 
   <project path="bionic" remote="abstrakraft" name="lxc-android-bionic" revision="master"/>
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
