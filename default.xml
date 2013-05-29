@@ -4,11 +4,15 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
+  <remote  name="abstrakraft"
+           fetch="https://github.com/abstrakraft/" />
   <default revision="refs/tags/android-4.2.2_r1.2"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform/build" groups="pdk" >
+  <project path="external/lxc" remote="abstrakraft" name="lxc-android-lxc" revision="android-lxc-4.2.2_r1.2" />
+
+  <project path="build" remote="abstrakraft" name="lxc-android-build" groups="pdk" revision="android-lxc-4.2.2_r1.2" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
